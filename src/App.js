@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, Fragment } from "react";
+
+//Importamos los componentes
+import Formulario from "./Components/Formulario";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // Utilizar useState con 3 states
+    const [artista, setArtista] = useState("");
+    const [letra, setLetra] = useState([]);
+    const [info, setInfo] = useState({});
+
+    return (
+        <Fragment>
+            <Formulario />
+        </Fragment>
+    );
 }
 
 export default App;
