@@ -3,6 +3,7 @@ import axios from 'axios';
 
 //Importamos los componentes
 import Formulario from "./Components/Formulario";
+import Cancion from "./Components/Cancion";
 
 function App() {
     // Utilizar useState con 3 states
@@ -29,6 +30,17 @@ function App() {
             <Formulario 
               consultarAPILetra={consultarAPILetra}
             />
+            <div className="container mt-5">
+              <div className="row">
+                <div className="col-6">
+                   
+                </div>
+                <div className="col-6">
+                  <Cancion letra={letra} />
+                </div>
+              </div>
+
+            </div>
         </Fragment>
     );
 }
