@@ -12,22 +12,22 @@ function Formulario(props) {
             ...busqueda,
             [e.target.name]: e.target.value
         });
-        console.log(busqueda);
+        // console.log(busqueda);
     };
 
     // cuando hacemos submit al form
-    const enviarInformacion = (e) => {
+    const enviarInformacion = e => {
         e.preventDefault();
         props.consultarAPILetra(busqueda);
-    }
-
+    };
 
     return (
         <div className="bg-info">
             <div className="container">
                 <div className="row">
-                    <form className="col card text-white bg-transparent  mb-5 pt-5 pb-2"
-                    onSubmit={enviarInformacion}
+                    <form
+                        className="col card text-white bg-transparent  mb-5 pt-5 pb-2"
+                        onSubmit={enviarInformacion}
                     >
                         <fieldset>
                             <legend className="text-center">

@@ -1,18 +1,16 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from "react";
 
-
-function Cancion(props){
-
+function Cancion(props) {
     const { letra } = props;
 
-    if(letra.length === 0 ) return null;
+    if (letra.length === 0) return null;
 
-    return(
+    return (
         <Fragment>
-    <h2>Letra Canción</h2>
-    <p className="letra">{letra}</p>
-    </Fragment>
-    )
+            <h2>Letra Canción</h2>
+            <p className="letra">{letra}</p>
+        </Fragment>
+    );
 }
 
 export default Cancion;
