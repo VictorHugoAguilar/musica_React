@@ -5,6 +5,7 @@ import axios from "axios";
 import Formulario from "./Components/Formulario";
 import Cancion from "./Components/Cancion";
 import Informacion from "./Components/Informacion";
+import Error from "./Components/Error";
 
 function App() {
     // Utilizar useState con 3 states
@@ -58,11 +59,11 @@ function App() {
                     // console.log(info)
                 } else {
                     setError(true);
-                    console.log("error en el else" + error);
+                    // console.log("error en el else" + error);
                 }
             } catch {
                 setError(true);
-                console.log("error en el cathc" + error);
+                // console.log("error en el cathc" + error);
             }
         }
     };
@@ -76,11 +77,11 @@ function App() {
         letra[0] !== false ? (
             <Cancion letra={letra} />
         ) : (
-            <div className="alert alert-danger">No se ha encontrado letra</div>
+            <Error mensaje={"No se ha encontrado letra"} />
         );
 
     const artistaEncontrado = error ? (
-        <div className="alert alert-danger">No se ha artista</div>
+        <Error mensaje={"No se ha encontrado artista"} />
     ) : (
         <Informacion info={info} />
     );
